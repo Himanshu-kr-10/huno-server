@@ -8,8 +8,6 @@ const NavigationAction = () => {
 
   const { onOpen } = useModal();
 
-
-
   return (
     <div>
       <ActionTooltip

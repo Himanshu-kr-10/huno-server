@@ -4,7 +4,6 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
-  DialogDescription,
   DialogHeader,
 } from "@/components/ui/dialog"
 
@@ -42,7 +41,6 @@ export const InviteModal = () => {
     try {
       setIsLoading(true);
       const response = await axios.patch(`/api/servers/${server?.id}/invite-code`);
-
       onOpen("invite", { server: response.data })
     }catch(e) {
       console.error(e);
@@ -52,7 +50,7 @@ export const InviteModal = () => {
   }
 
   return (
-    <Dialog open={isModalOpen} onOpenChange={onClose} >
+    <Dialog open={isModalOpen} onOpenChange={onClose}>
       <DialogContent className="bg-white p-0 overflow-hidden text-black">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-center text-2xl font-bold">Invite Friends</DialogTitle>

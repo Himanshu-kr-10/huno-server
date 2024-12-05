@@ -58,6 +58,9 @@ export async function GET(
               profile: true
             }
           }
+        },
+        orderBy: {
+          createdAt: "desc"
         }
       })
     }
